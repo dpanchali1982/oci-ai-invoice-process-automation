@@ -1,0 +1,47 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/REST/ProcessInvoice_REQUEST/types" name="ProcessInvoice_REQUESTPortType" adapter="REST" wsdlLocation="ProcessInvoice_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rest.RestAdapterConnectionFactory">
+      <property name="cloud.adapter.plugin.version" value="23.3.5"/>
+      <property name="cloud.adapter.sdk.version" value="23.3.5"/>
+      <property name="connectionUrl" value="%%DEMO_AI_DOCUMENT_UNDERSTA_connectionUrl"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="59850f8cfafb6b0724930d6bfbb74a3126b7e6265b944822a003a29e213e81e9"/>
+      <property name="enableTwoWaySSL" value="true"/>
+      <property name="privateEndpoint" value="false"/>
+      <property name="securityPolicy" value="OCI_SIGNATURE_VERSION1"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="ProcessInvoice_REQUESTPortType" operation="execute">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="execute"/>
+      <property name="HTTPHeadersAdded" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/ProcessInvoice/types"/>
+      <property name="RequestElementName" value="request-wrapper"/>
+      <property name="RequestMediaType" value="application/json"/>
+      <property name="RequestSample" value="{   &quot;processorConfig&quot;: {     &quot;features&quot;: [       {         &quot;featureType&quot;: &quot;KEY_VALUE_EXTRACTION&quot;       },       {         &quot;featureType&quot;: &quot;DOCUMENT_CLASSIFICATION&quot;,         &quot;maxResults&quot;: 5       }     ],     &quot;processorType&quot;: &quot;GENERAL&quot;,     &quot;isZipOutputEnabled&quot;: false,     &quot;language&quot;: &quot;ENG&quot;   },   &quot;compartmentId&quot;: &quot;ocid1.compartment.oc1..aaaaaaaakcuk5bslbaiyc72m2je27zyvqlfrny6wt56ojr5s6uwa5kuxb4na&quot;,   &quot;inputLocation&quot;: {     &quot;sourceType&quot;: &quot;INLINE_DOCUMENT_CONTENT&quot;,     &quot;data&quot;: &quot;......&quot;   },   &quot;outputLocation&quot;: {     &quot;namespaceName&quot;: &quot;orasenatdpltintegration01&quot;,     &quot;bucketName&quot;: &quot;DemoOIC&quot;,     &quot;prefix&quot;: &quot;in&quot;   } }"/>
+      <property name="ResourceURI" value="/20221109/processorJobs"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/ProcessInvoice/types"/>
+      <property name="ResponseElementName" value="response-wrapper"/>
+      <property name="ResponseMediaType" value="application/json"/>
+      <property name="ResponseSample" value="{   &quot;compartmentId&quot; : &quot;eu sunt id est&quot;,   &quot;features&quot; : [ {     &quot;featureType&quot; : &quot;TEXT_EXTRACTION&quot;   } ],   &quot;id&quot; : &quot;pariat&quot;,   &quot;lifecycleState&quot; : &quot;IN_PROGRESS&quot;,   &quot;outputLocation&quot; : {     &quot;bucketName&quot; : &quot;sed Duis&quot;,     &quot;namespaceName&quot; : &quot;in pariatur mollit ut&quot;,     &quot;prefix&quot; : &quot;Duis laborum deserunt&quot;   },   &quot;timeAccepted&quot; : &quot;1967-10-23T03:20:17.411Z&quot;,   &quot;displayName&quot; : &quot;amet est qui&quot;,   &quot;documentType&quot; : &quot;OTHERS&quot;,   &quot;inputLocation&quot; : {     &quot;sourceType&quot; : &quot;OBJECT_LIST_INLINE_INPUT_LOCATION&quot;   },   &quot;isZipOutputEnabled&quot; : false,   &quot;language&quot; : &quot;ENG&quot;,   &quot;lifecycleDetails&quot; : &quot;SUCCEEDED&quot;,   &quot;percentComplete&quot; : 71.68026659053332,   &quot;timeFinished&quot; : &quot;1944-01-15T08:55:51.710Z&quot;,   &quot;timeStarted&quot; : &quot;1987-12-05T05:34:39.081Z&quot; }"/>
+      <property name="allowChangeDefaultNamespace" value="false"/>
+      <property name="copyFaultFromModel" value="true"/>
+      <property name="forceWsdlTypesBuild" value="true"/>
+      <property name="generateConnectivityPropertiesOutboundRequest" value="RESTOUTREQ"/>
+      <property name="generateConnectivityPropertiesOutboundResponse" value="RESTOUTRES"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/ProcessInvoice_REQUEST/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/ProcessInvoice_REQUEST"/>
+      <property name="interactionSpecClass" value="oracle.tip.adapter.cloud.CloudInteractionSpec"/>
+      <property name="invocationStyle" value="REQUEST_RESPONSE"/>
+      <property name="isRequestJsonSchema" value="false"/>
+      <property name="isRequestRawBytes" value="false"/>
+      <property name="isResponseJsonSchema" value="false"/>
+      <property name="isResponseRawBytes" value="false"/>
+      <property name="operations" value="default"/>
+      <property name="postQueryParamsAsContent" value="false"/>
+      <property name="requestJsonTopLevelArray" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

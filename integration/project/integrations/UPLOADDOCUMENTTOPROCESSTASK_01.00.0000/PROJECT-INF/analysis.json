@@ -1,0 +1,1 @@
+{"id":"UPLOADDOCUMENTTOPROCESSTASK_01.00.0000","icsProject":{"version":"01.00.0000","percentageComplete":100,"modelType":"FREEFORM","projectCode":"UPLOADDOCUMENTTOPROCESSTASK","processorCount":{"INTEGRATION_METADATA":1,"MESSAGE_TRACKER":1,"TRANSFORMER":3,"SOURCE":1,"TARGET":2},"smartTags":"app:REST,style:App Driven Orchestration"}}

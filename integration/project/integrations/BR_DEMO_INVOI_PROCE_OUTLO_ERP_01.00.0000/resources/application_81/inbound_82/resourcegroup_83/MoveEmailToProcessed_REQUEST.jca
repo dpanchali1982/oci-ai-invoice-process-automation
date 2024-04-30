@@ -1,0 +1,29 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/microsoftemail/MoveEmailToProcessed/types" name="MoveEmailToProcessed_REQUESTPortType" adapter="microsoftemail" wsdlLocation="MoveEmailToProcessed_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.adapter.runtime.MicrosoftEmailOutboundConnectionFactory">
+      <property name="applicationVersion" value="1.0"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="a727a91891d1bf584a6b816f322492db80b13b22382bcb1abe0091e733edaf4e"/>
+      <property name="oauth.scope" value="%%null_oauth.scope"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="MoveEmailToProcessed_REQUESTPortType" operation="Move-Message-Graph-API_POST">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="Move-Message-Graph-API_POST"/>
+      <property name="operationPath" value="https://graph.microsoft.com/v1.0/me/messages/{message_id}/move"/>
+      <property name="enforceResponseSizeRestriction" value="true"/>
+      <property name="oic.gen3.invoke" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/microsoftemail/MoveEmailToProcessed/types"/>
+      <property name="RequestElementName" value="graphMessageResource.definitions.requestPayload_mvcp"/>
+      <property name="RequestMediaType" value="application/json"/>
+      <property name="ResourceURI" value="https://graph.microsoft.com/v1.0/me/messages/{message_id}/move"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/microsoftemail/MoveEmailToProcessed/types"/>
+      <property name="ResponseElementName" value="graphMessageResource.definitions.messageResource"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/microsoftemail/MoveEmailToProcessed/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/microsoftemail/MoveEmailToProcessed"/>
+      <property name="operation" value="Move-Message-Graph-API_POST"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

@@ -1,0 +1,50 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/REST/UploadTaskDcoument_REQUEST/types" name="UploadTaskDcoument_REQUESTPortType" adapter="REST" wsdlLocation="UploadTaskDcoument_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rest.RestAdapterConnectionFactory">
+      <property name="cloud.adapter.plugin.version" value="23.3.5"/>
+      <property name="cloud.adapter.sdk.version" value="23.3.5"/>
+      <property name="connectionUrl" value="%%PROCESSRESTCONNECTION_connectionUrl"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="fae325f4e88817f9d731ba84a2c2e5e4c54ea8a4678869fa7456928ec2b56f62"/>
+      <property name="oauth.access.token.uri" value="%%PROCESSRESTCONNECTION_oauth.access.token.uri"/>
+      <property name="oauth.request.content.type" value="%%PROCESSRESTCONNECTION_oauth.request.content.type"/>
+      <property name="oauth.scope" value="%%PROCESSRESTCONNECTION_oauth.scope"/>
+      <property name="privateEndpoint" value="false"/>
+      <property name="securityPolicy" value="OAUTH_RESOURCE_OWNER_PASSWORD_CREDENTIALS"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="UploadTaskDcoument_REQUESTPortType" operation="execute">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="execute"/>
+      <property name="HTTPHeadersAdded" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud"/>
+      <property name="RequestElementName" value="ParameterList"/>
+      <property name="RequestMediaType" value="multipart/form-data"/>
+      <property name="ResourceURI" value="/process/api/v1/tasks/{id}/documents/files/data"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/UploadTaskDcoument/types"/>
+      <property name="ResponseElementName" value="response-wrapper"/>
+      <property name="ResponseMediaType" value="application/json"/>
+      <property name="ResponseSample" value="{     &quot;documentId&quot;: &quot;ba7a21b4-3232-4504-adbf-88539bb49b9b&quot;,     &quot;parentFolderId&quot;: &quot;af98bc5e-2785-49ea-8d87-90d548be6676&quot;,     &quot;documentName&quot;: &quot;1.pdf&quot;,     &quot;fileName&quot;: &quot;INV-3337.pdf&quot;,     &quot;href&quot;: &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/tasks/77807b0e-fb23-11ee-8b76-be89a2c9438c/documents/files/ba7a21b4-3232-4504-adbf-88539bb49b9b/data&quot;,     &quot;contentType&quot;: &quot;application/pdf&quot;,     &quot;createdBy&quot;: {         &quot;id&quot;: &quot;7a477e53e3824f71bff03735858992fa&quot;,         &quot;name&quot;: &quot;devuser2&quot;     },     &quot;createdDate&quot;: &quot;2024-04-15T12:31:59.377+00:00&quot;,     &quot;lastUpdatedBy&quot;: {         &quot;id&quot;: &quot;7a477e53e3824f71bff03735858992fa&quot;,         &quot;name&quot;: &quot;devuser2&quot;     },     &quot;lastUpdatedDate&quot;: &quot;2024-04-15T12:31:59.377+00:00&quot;,     &quot;permissions&quot;: [         &quot;READ&quot;,         &quot;UPDATE&quot;,         &quot;DELETE&quot;     ] }"/>
+      <property name="allowChangeDefaultNamespace" value="false"/>
+      <property name="attachmentXpathInfo" value="//*[namespace-uri()='http://xmlns.oracle.com/cloud/adapter/REST/UploadTaskDcoument_REQUEST/types' and local-name()='execute']/*[namespace-uri()='http://xmlns.oracle.com/cloud/adapter/REST/UploadTaskDcoument_REQUEST/types' and local-name()='attachments']/*[namespace-uri()='http://xmlns.oracle.com/cloud/ics/attachment/v1/types' and local-name()='attachment']/*[namespace-uri()='http://xmlns.oracle.com/cloud/ics/attachment/v1/types' and local-name()='attachmentReference']"/>
+      <property name="copyFaultFromModel" value="true"/>
+      <property name="forceWsdlTypesBuild" value="true"/>
+      <property name="generateConnectivityPropertiesOutboundRequest" value="RESTOUTREQ"/>
+      <property name="generateConnectivityPropertiesOutboundResponse" value="RESTOUTRES"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/UploadTaskDcoument_REQUEST/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/UploadTaskDcoument_REQUEST"/>
+      <property name="interactionSpecClass" value="oracle.tip.adapter.cloud.CloudInteractionSpec"/>
+      <property name="invocationStyle" value="REQUEST_RESPONSE"/>
+      <property name="isRequestJsonSchema" value="false"/>
+      <property name="isRequestRawBytes" value="false"/>
+      <property name="isResponseJsonSchema" value="false"/>
+      <property name="isResponseRawBytes" value="false"/>
+      <property name="multipartRequestPayloadType" value="multipart/form-data"/>
+      <property name="operations" value="default"/>
+      <property name="postQueryParamsAsContent" value="false"/>
+      <property name="responseJsonTopLevelArray" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

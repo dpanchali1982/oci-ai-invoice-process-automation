@@ -1,0 +1,26 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/microsoftemail/GetMessages/types" name="GetMessages_REQUESTPortType" adapter="microsoftemail" wsdlLocation="GetMessages_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.adapter.runtime.MicrosoftEmailOutboundConnectionFactory">
+      <property name="applicationVersion" value="1.0"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="a727a91891d1bf584a6b816f322492db80b13b22382bcb1abe0091e733edaf4e"/>
+      <property name="oauth.scope" value="%%BR_OUTLOOK_CONN_oauth.scope"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="GetMessages_REQUESTPortType" operation="Get-Folder-Messages-Graph-API_GET">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="Get-Folder-Messages-Graph-API_GET"/>
+      <property name="operationPath" value="https://graph.microsoft.com/v1.0/me/mailFolders/{folder_id}/messages"/>
+      <property name="enforceResponseSizeRestriction" value="true"/>
+      <property name="oic.gen3.invoke" value="true"/>
+      <property name="HttpVerb" value="GET"/>
+      <property name="ResourceURI" value="https://graph.microsoft.com/v1.0/me/mailFolders/{folder_id}/messages"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/microsoftemail/GetMessages/types"/>
+      <property name="ResponseElementName" value="graphMessageResource.definitions.messages.Get-Folder-Messages-Graph-API_GET._ResponseDataType"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/microsoftemail/GetMessages/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/microsoftemail/GetMessages"/>
+      <property name="operation" value="Get-Folder-Messages-Graph-API_GET"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

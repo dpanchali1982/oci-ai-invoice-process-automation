@@ -1,0 +1,45 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/collocatedics/CallIntegrationToExtractData_REQUEST/types" name="CallIntegrationToExtractData_REQUESTPortType" adapter="collocatedics" wsdlLocation="CallIntegrationToExtractData_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rest.RestAdapterConnectionFactory">
+      <property name="applicationVersion" value="1.0"/>
+      <property name="cloud.adapter.plugin.version" value="18.1.5"/>
+      <property name="cloud.adapter.sdk.version" value="18.1.5"/>
+      <property name="securityPolicy" value="NONE"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="CallIntegrationToExtractData_REQUESTPortType" operation="POST">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="POST"/>
+      <property name="operationPath" value="/invoice-process"/>
+      <property name="EndpointPropertiesHandler" value="oracle.cloud.connector.ics.ICSAdapterEndpointPropertiesHandler"/>
+      <property name="HTTPHeadersAdded" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="QueryParameters" value=""/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/ics/binary/v1/types"/>
+      <property name="RequestElementName" value="streamReference"/>
+      <property name="RequestMediaType" value="application/octet-stream"/>
+      <property name="ResourceName" value="/invoice-process"/>
+      <property name="ResourceURI" value="/invoice-process"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/collocatedics/CallIntegrationToExtractData_REQUEST/types"/>
+      <property name="ResponseElementName" value="POST"/>
+      <property name="allowChangeDefaultNamespace" value="false"/>
+      <property name="attachmentXpathInfo" value="//*[namespace-uri()='http://xmlns.oracle.com/cloud/adapter/collocatedics/CallIntegrationToExtractData_REQUEST/types' and local-name()='POST']/*[namespace-uri()='http://xmlns.oracle.com/cloud/ics/binary/v1/types' and local-name()='streamReference']"/>
+      <property name="connectionType" value="openapi"/>
+      <property name="generateConnectivityPropertiesOutboundRequest" value="SKIPOUTREQ"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationContext" value="INTRA_PROJECT"/>
+      <property name="integration_code" value="BR_DEMO_INVOI_PROCE_EXTRA_DATA"/>
+      <property name="integration_created" value="2024-04-16T08:14:57.485+0000"/>
+      <property name="integration_id" value="BR_DEMO_INVOI_PROCE_EXTRA_DATA|01.01.0001"/>
+      <property name="integration_name" value="Invoice Process Extract Data"/>
+      <property name="integration_operation" value="POST"/>
+      <property name="integration_service" value="/invoice-process"/>
+      <property name="integration_version" value="01.01.0001"/>
+      <property name="interactionSpecClass" value="oracle.tip.adapter.cloud.CloudInteractionSpec"/>
+      <property name="isRequestRawBytes" value="true"/>
+      <property name="operation" value="POST"/>
+      <property name="resources" value="/invoice-process"/>
+      <property name="serviceType" value="rest"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

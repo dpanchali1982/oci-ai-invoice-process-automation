@@ -1,0 +1,109 @@
+---
+id: DEMO_IDP_FOR_INVOIC_PROCES
+code: DEMO_IDP_FOR_INVOIC_PROCES
+name: Demo IDP for Invoice Processing
+type: DEVELOPED
+smartTags:
+- "app:rest,style:app driven orchestration"
+- "app:microsoftemail, app:integration,style:scheduled orchestration"
+- style:app driven orchestration
+- "app:rest, app:erp, app:integration,style:app driven orchestration"
+- app:rest
+- "app:rest, app:integration,style:app driven orchestration"
+revision: 0
+projectRevision: 657
+status: ACTIVE
+createdBy: bonnie.r.rockey@oracle.com
+createdDate: 2024-03-28T11:06:09.485+0000
+updatedBy: bonnie.r.rockey@oracle.com
+updatedDate: 2024-03-28T11:06:09.485+0000
+latestBy: bonnie.r.rockey@oracle.com
+latestDate: 2024-04-29T11:19:32.480+0000
+assets:
+  integrations:
+  - id: BR_DEMO_INVOI_PROCE_EXTRA_DATA|01.01.0001
+    name: Invoice Process Extract Data
+    revision: 11
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-25T10:56:40.338+0000
+  - id: BR_DEMO_INVOI_PROCE_OUTLO_ERP|01.00.0000
+    name: BR Demo Invoice Process Outlook-ERP
+    revision: 6
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-20T07:19:01.597+0000
+  - id: BR_DEMO_INVO_PROC_UPDA_ERP_CLOU|01.00.0000
+    name: Invoice Process Update ERP Cloud
+    revision: 12
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-22T12:23:26.543+0000
+  - id: INVOICE_PROCESS_UPDATE_STATUS|01.00.0000
+    name: Invoice Process Update Status
+    revision: 19
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-22T11:33:45.695+0000
+  - id: UPLOADDOCUMENTTOPROCESSTASK|01.00.0000
+    name: UploadDocumentToProcessTask
+    revision: 0
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-25T10:56:43.226+0000
+  connections:
+  - id: BH_REST_CONNECTION
+    name: BH_REST_Connection
+    revision: 1
+    updatedBy: dilip.kumar.panchali@oracle.com
+    updatedDate: 2024-04-08T13:03:34.432+0000
+  - id: BR_OUTLOOK_CONN
+    name: BR Outlook Conn
+    revision: 1
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-01T11:38:35.505+0000
+  - id: DEMO_AI_DOCUMENT_UNDERSTA
+    name: Demo AI Document Understanding
+    revision: 1
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-01T11:41:32.914+0000
+  - id: ERP_CLOUD_CONN
+    name: ERP Cloud Conn
+    revision: 7
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-22T12:19:20.850+0000
+  - id: OBJECT_STORAGE_CONN_ASHBURN
+    name: Object Storage Conn Ashburn
+    revision: 1
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-01T11:42:47.285+0000
+  - id: PRESEEDED_COLLOCATED_CONN_1741
+    name: Local Integration
+    revision: 0
+    updatedBy: blrdevuser
+    updatedDate: 2023-03-07T14:37:31.290+0000
+  - id: PROCESSRESTCONNECTION
+    name: ProcessRestConnection
+    revision: 19
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-25T10:56:30.722+0000
+  - id: REST_INBOUND_CONN
+    name: REST_INBOUND_CONN
+    revision: 0
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-01T11:36:17.422+0000
+  - id: VBCS_CONN
+    name: VBCS Conn
+    revision: 1
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-16T12:16:50.904+0000
+  lookups:
+  - id: SupplierLookup
+    name: SupplierLookup
+    revision: 1
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-16T10:54:56.972+0000
+  labels:
+  - id: IDP_DEMO
+    name: IDP Demo
+    revision: 0
+    updatedBy: bonnie.r.rockey@oracle.com
+    updatedDate: 2024-04-29T11:19:32.480+0000
+origin:
+  tenantOCID: ocid1.tenancy.oc1..aaaaaaaackopa27emaz4uteg4sseutmk3qq73iyoymttpyjdu34bilvxo3da
+  serviceInstanceOCID: ocid1.integrationinstance.oc1.phx.amaaaaaaytsgwaya252ecqchhu5ysi2kcy654rpdfwmb4tv5ii37z4k5roxa

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<oracle-xsl-webmapper:StateInfo xmlns:oracle-xsl-webmapper="http://www.oracle.com/xsl/webmapper/state" version="1.1">
+    <oracle-xsl-webmapper:ErrorsCount>0</oracle-xsl-webmapper:ErrorsCount>
+    <oracle-xsl-webmapper:WarningsCount>0</oracle-xsl-webmapper:WarningsCount>
+    <oracle-xsl-webmapper:IsImported>false</oracle-xsl-webmapper:IsImported>
+    <oracle-xsl-webmapper:HasMappings>true</oracle-xsl-webmapper:HasMappings>
+    <oracle-xsl-webmapper:StateInfoIsStale>false</oracle-xsl-webmapper:StateInfoIsStale>
+    <oracle-xsl-webmapper:SourcesReferenced>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/CallProcess_REQUEST/types">ns3:executeResponse</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_385/inbound_386/resourcegroup_387/CallProcess_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>CallProcess</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:SourcesReferenced>
+    <oracle-xsl-webmapper:SourcesReferenced>
+        <param>InvoiceNumber</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:SourcesReferenced>
+    <oracle-xsl-webmapper:SourcesReferenced>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/FileRead_REQUEST/types">ns3:execute</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_13/outbound_14/resourcegroup_15/FileRead_REQUEST.wsdl</uriAbsoluteLocation>
+        <primary>true</primary>
+    </oracle-xsl-webmapper:SourcesReferenced>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/FileRead_REQUEST/types">ns3:execute</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_13/outbound_14/resourcegroup_15/FileRead_REQUEST.wsdl</uriAbsoluteLocation>
+        <primary>true</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/CallProcess_REQUEST/types">ns3:executeResponse</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_385/inbound_386/resourcegroup_387/CallProcess_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>CallProcess</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/CallProcess_REQUEST/types">ns3:execute</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_385/inbound_386/resourcegroup_387/CallProcess_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>CallProcess_REQUEST</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/GetExtractedDataFromBucket_REQUEST/types">ns3:executeResponse</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_37/inbound_38/resourcegroup_39/GetExtractedDataFromBucket_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>GetExtractedDataFromBucket</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/GetExtractedDataFromBucket_REQUEST/types">ns3:execute</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_37/inbound_38/resourcegroup_39/GetExtractedDataFromBucket_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>GetExtractedDataFromBucket_REQUEST</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/ProcessInvoice_REQUEST/types">ns3:executeResponse</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_20/inbound_21/resourcegroup_22/ProcessInvoice_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>ProcessInvoice</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/ProcessInvoice_REQUEST/types">ns3:execute</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/application_20/inbound_21/resourcegroup_22/ProcessInvoice_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>ProcessInvoice_REQUEST</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/stagefile/ReadFile_REQUEST/types">ns3:ReadResponse</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/processor_81/resourcegroup_82/ReadFile_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>ReadFile</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://www.oracle.com/2014/03/ic/integration/metadata">ns3:metadata</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_7c5230ee-eebb-4379-9e66-24c0f4a834f0/resources/processor_1/resourcegroup_2/ICSIntegrationMetadata.xsd</uriAbsoluteLocation>
+        <param>self</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <param>InvoiceNumber</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <param>InvoiceDate</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <param>InvoiceTotal</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <param>VendorName</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <param>tracking_var_1</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <param>tracking_var_2</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <param>tracking_var_3</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+</oracle-xsl-webmapper:StateInfo>

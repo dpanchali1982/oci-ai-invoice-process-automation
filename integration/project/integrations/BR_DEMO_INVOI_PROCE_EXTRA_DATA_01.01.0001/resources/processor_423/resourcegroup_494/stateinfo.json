@@ -1,0 +1,1 @@
+{"referencedFunctionsWithTrackFlag":[],"version":2.0,"errorCount":0,"warningCount":0,"referencedLookupData":[{"lookupTableNameWithLocation":"\"SupplierLookup\"","source":"\"SupplierName\"","target":"\"SupplierSite\""}],"errorMsgs":[],"variablesReferenced":[{"rootElement":"{http://www.w3.org/2001/XMLSchema}string","variableName":"VendorName","wsdlURI":null}],"warningMsgs":[]}

@@ -1,0 +1,49 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/REST/CallProcess_REQUEST/types" name="CallProcess_REQUESTPortType" adapter="REST" wsdlLocation="CallProcess_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rest.RestAdapterConnectionFactory">
+      <property name="cloud.adapter.plugin.version" value="23.3.5"/>
+      <property name="cloud.adapter.sdk.version" value="23.3.5"/>
+      <property name="connectionUrl" value="%%null_connectionUrl"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="fae325f4e88817f9d731ba84a2c2e5e4c54ea8a4678869fa7456928ec2b56f62"/>
+      <property name="oauth.access.token.uri" value="%%null_oauth.access.token.uri"/>
+      <property name="oauth.request.content.type" value="%%null_oauth.request.content.type"/>
+      <property name="oauth.scope" value="%%null_oauth.scope"/>
+      <property name="privateEndpoint" value="false"/>
+      <property name="securityPolicy" value="OAUTH_RESOURCE_OWNER_PASSWORD_CREDENTIALS"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="CallProcess_REQUESTPortType" operation="execute">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="execute"/>
+      <property name="HTTPHeadersAdded" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/CallProcess/types"/>
+      <property name="RequestElementName" value="request-wrapper"/>
+      <property name="RequestMediaType" value="application/json"/>
+      <property name="RequestSample" value="{   &quot;params&quot; : {     &quot;applicationName&quot; : &quot;IDPExceptionApp&quot;,     &quot;processName&quot; : &quot;InvoiceExceptionProcess&quot;   },   &quot;dataObject&quot; : {     &quot;invoiceDetails&quot; : {       &quot;invoiceNumber&quot; : &quot;IDP Demo Invoice Test&quot;,       &quot;invoiceCurrency&quot; : &quot;USD&quot;,       &quot;invoiceAmount&quot; : 8000,       &quot;invoiceDate&quot; : &quot;2024-02-02&quot;,       &quot;businessUnit&quot; : &quot;US1 Business Unit&quot;,       &quot;supplier&quot; : &quot;ABC Consulting&quot;,       &quot;supplierSite&quot; : &quot;ABC US&quot;,       &quot;invoiceGroup&quot; : &quot;&quot;,       &quot;description&quot; : &quot;This is IDP Demo Invoice&quot;,       &quot;invoiceLines&quot; : [ { &quot;item&quot;:&quot;item&quot;,         &quot;lineNumber&quot; : 1,         &quot;lineAmount&quot; : 4000,         &quot;accountingDate&quot; : &quot;2024-02-02&quot;,         &quot;distributionCombination&quot; : &quot;101.10.65600.121.000.000&quot;       }, { &quot;item&quot;:&quot;item&quot;,         &quot;lineNumber&quot; : 2,         &quot;lineAmount&quot; : 4000,         &quot;accountingDate&quot; : &quot;2024-02-02&quot;,         &quot;distributionCombination&quot; : &quot;101.10.65600.121.000.000&quot;       } ],       &quot;id&quot; : &quot;as&quot;     }   } }"/>
+      <property name="ResourceURI" value="/process/api/v1/instances"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/CallProcess/types"/>
+      <property name="ResponseElementName" value="response-wrapper"/>
+      <property name="ResponseMediaType" value="application/json"/>
+      <property name="ResponseSample" value="{ &quot;links&quot; : [ { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/instances&quot;, &quot;rel&quot; : &quot;self&quot; }, { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1&quot;, &quot;rel&quot; : &quot;parent&quot; }, { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/instances/variables&quot;, &quot;rel&quot; : &quot;variables&quot; }, { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/instances/folders&quot;, &quot;rel&quot; : &quot;folders&quot; }, { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/instances/history&quot;, &quot;rel&quot; : &quot;history&quot; }, { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/instances/comments&quot;, &quot;rel&quot; : &quot;comments&quot; }, { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/instances/documents&quot;, &quot;rel&quot; : &quot;documents&quot; }, { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/instances/jobs&quot;, &quot;rel&quot; : &quot;jobs&quot; }, { &quot;href&quot; : &quot;https://opaoicbengaluruintegration3o-orasenatdpltintegration01-phx.process.oci.oraclecloud.com/process/api/v1/instances/incidents&quot;, &quot;rel&quot; : &quot;incidents&quot; } ], &quot;id&quot; : &quot;e72c159b-d7c1-11ee-98cb-c263ac1094fb&quot;, &quot;processDefinitionId&quot; : &quot;d2591f24-d7c1-11ee-8430-2636ad257282&quot;, &quot;title&quot; : &quot;IntegrationProcess&quot;, &quot;state&quot; : &quot;ACTIVE&quot;, &quot;createdBy&quot; : { &quot;id&quot; : &quot;7a477e53e3824f71bff03735858992fa&quot;, &quot;name&quot; : &quot;devuser2&quot;, &quot;displayName&quot; : &quot;devuser2&quot;, &quot;type&quot; : &quot;USER&quot; }, &quot;applicationName&quot; : &quot;TriggerFromIntegration&quot;, &quot;applicationVersion&quot; : &quot;1.0&quot; }"/>
+      <property name="allowChangeDefaultNamespace" value="false"/>
+      <property name="copyFaultFromModel" value="true"/>
+      <property name="forceWsdlTypesBuild" value="true"/>
+      <property name="generateConnectivityPropertiesOutboundRequest" value="RESTOUTREQ"/>
+      <property name="generateConnectivityPropertiesOutboundResponse" value="RESTOUTRES"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/CallProcess_REQUEST/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/CallProcess_REQUEST"/>
+      <property name="interactionSpecClass" value="oracle.tip.adapter.cloud.CloudInteractionSpec"/>
+      <property name="invocationStyle" value="REQUEST_RESPONSE"/>
+      <property name="isRequestJsonSchema" value="false"/>
+      <property name="isRequestRawBytes" value="false"/>
+      <property name="isResponseJsonSchema" value="false"/>
+      <property name="isResponseRawBytes" value="false"/>
+      <property name="operations" value="default"/>
+      <property name="postQueryParamsAsContent" value="false"/>
+      <property name="requestJsonTopLevelArray" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

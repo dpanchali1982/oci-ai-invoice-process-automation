@@ -1,0 +1,1 @@
+{"id":"INVOICE_PROCESS_UPDATE_STATUS_01.00.0000","icsProject":{"version":"01.00.0000","percentageComplete":100,"modelType":"FREEFORM","projectCode":"INVOICE_PROCESS_UPDATE_STATUS","processorCount":{"INTEGRATION_METADATA":1,"MESSAGE_TRACKER":1,"CONTENT_BASED_ROUTER":1,"TRANSFORMER":3,"ASSIGNMENT":3,"SOURCE":1,"TARGET":3},"smartTags":"app:REST,style:App Driven Orchestration"}}

@@ -1,0 +1,47 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/REST/InsertRecord_REQUEST/types" name="InsertRecord_REQUESTPortType" adapter="REST" wsdlLocation="InsertRecord_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rest.RestAdapterConnectionFactory">
+      <property name="cloud.adapter.plugin.version" value="23.3.5"/>
+      <property name="cloud.adapter.sdk.version" value="23.3.5"/>
+      <property name="connectionUrl" value="%%VBCS_CONN_connectionUrl"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="7400283ce3f8b0e3f3e0cb3c6e931fd54b083432e23f26b636f9f3a0978966f2"/>
+      <property name="privateEndpoint" value="false"/>
+      <property name="securityPolicy" value="BASIC_AUTH"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="InsertRecord_REQUESTPortType" operation="execute">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="execute"/>
+      <property name="HTTPHeadersAdded" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/InsertRecord/types"/>
+      <property name="RequestElementName" value="request-wrapper"/>
+      <property name="RequestMediaType" value="application/json"/>
+      <property name="RequestSample" value="{&quot;invoiceID&quot;:&quot;invoiceID&quot;,   &quot;invoiceNumber&quot; : &quot;INV-123456789&quot;,   &quot;source&quot; : &quot;Vendor X&quot;,   &quot;invoiceTotal&quot; : 1500.0,   &quot;invoiceDate&quot; : &quot;2024-04-16&quot;,   &quot;invoiceCurrency&quot; : &quot;USD&quot;,   &quot;supplier&quot; : &quot;ABC Corporation&quot;,   &quot;status&quot; : &quot;Paid&quot;,   &quot;invoiceAssignee&quot; : &quot;John Doe&quot;,   &quot;lastUpdateDateTime&quot; : &quot;2024-04-16T10:30:00Z&quot; }"/>
+      <property name="ResourceURI" value="/ic/builder/design/Invoice_Process_IDP/1.0/resources/data/InvoiceStatus"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/InsertRecord/types"/>
+      <property name="ResponseElementName" value="response-wrapper"/>
+      <property name="ResponseMediaType" value="application/json"/>
+      <property name="ResponseSample" value="{   &quot;id&quot; : 5,   &quot;creationDate&quot; : &quot;2024-04-16T12:25:56+00:00&quot;,   &quot;lastUpdateDate&quot; : &quot;2024-04-16T12:25:56.010+00:00&quot;, &quot;invoiceID&quot;:&quot;invoiceID&quot;,   &quot;createdBy&quot; : &quot;bonnie.r.rockey@oracle.com&quot;,   &quot;lastUpdatedBy&quot; : &quot;bonnie.r.rockey@oracle.com&quot;,   &quot;invoiceNumber&quot; : &quot;INV-123456789&quot;,   &quot;source&quot; : &quot;Vendor X&quot;,   &quot;invoiceTotal&quot; : 1500,   &quot;invoiceDate&quot; : &quot;2024-04-16&quot;,   &quot;invoiceCurrency&quot; : &quot;USD&quot;,   &quot;supplier&quot; : &quot;ABC Corporation&quot;,   &quot;status&quot; : &quot;Paid&quot;,   &quot;invoiceAssignee&quot; : &quot;John Doe&quot;,   &quot;lastUpdateDateTime&quot; : &quot;2024-04-16T10:30:00+00:00&quot;,   &quot;links&quot; : [ {     &quot;rel&quot; : &quot;self&quot;,     &quot;href&quot; : &quot;https://oic-vbcs-bengaluruintegration3-vb-orasenatdpltintegration01.builder.us-phoenix-1.ocp.oraclecloud.com:443/ic/builder/design/Invoice_Process_IDP/1.0/resources/data/InvoiceStatus/5&quot;,     &quot;name&quot; : &quot;InvoiceStatus&quot;,     &quot;kind&quot; : &quot;item&quot;,     &quot;properties&quot; : {       &quot;changeIndicator&quot; : &quot;ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200146A6176612E6D6174682E426967446563696D616C54C71557F981284F0300024900057363616C654C0006696E7456616C7400164C6A6176612F6D6174682F426967496E74656765723B787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000737200146A6176612E6D6174682E426967496E74656765728CFC9F1FA93BFB1D030006490008626974436F756E744900096269744C656E67746849001366697273744E6F6E7A65726F427974654E756D49000C6C6F776573745365744269744900067369676E756D5B00096D61676E69747564657400025B427871007E0004FFFFFFFFFFFFFFFFFFFFFFFEFFFFFFFE00000001757200025B42ACF317F8060854E002000078700000000101787878&quot;     }   }, {     &quot;rel&quot; : &quot;canonical&quot;,     &quot;href&quot; : &quot;https://oic-vbcs-bengaluruintegration3-vb-orasenatdpltintegration01.builder.us-phoenix-1.ocp.oraclecloud.com:443/ic/builder/design/Invoice_Process_IDP/1.0/resources/data/InvoiceStatus/5&quot;,     &quot;name&quot; : &quot;InvoiceStatus&quot;,     &quot;kind&quot; : &quot;item&quot;   } ] }"/>
+      <property name="allowChangeDefaultNamespace" value="false"/>
+      <property name="copyFaultFromModel" value="true"/>
+      <property name="forceWsdlTypesBuild" value="true"/>
+      <property name="generateConnectivityPropertiesOutboundRequest" value="RESTOUTREQ"/>
+      <property name="generateConnectivityPropertiesOutboundResponse" value="RESTOUTRES"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/InsertRecord_REQUEST/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/InsertRecord_REQUEST"/>
+      <property name="interactionSpecClass" value="oracle.tip.adapter.cloud.CloudInteractionSpec"/>
+      <property name="invocationStyle" value="REQUEST_RESPONSE"/>
+      <property name="isRequestJsonSchema" value="false"/>
+      <property name="isRequestRawBytes" value="false"/>
+      <property name="isResponseJsonSchema" value="false"/>
+      <property name="isResponseRawBytes" value="false"/>
+      <property name="operations" value="default"/>
+      <property name="postQueryParamsAsContent" value="false"/>
+      <property name="requestJsonTopLevelArray" value="false"/>
+      <property name="responseJsonTopLevelArray" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

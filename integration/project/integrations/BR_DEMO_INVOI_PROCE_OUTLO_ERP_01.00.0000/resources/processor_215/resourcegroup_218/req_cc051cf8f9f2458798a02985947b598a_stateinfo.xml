@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<oracle-xsl-webmapper:StateInfo xmlns:oracle-xsl-webmapper="http://www.oracle.com/xsl/webmapper/state" version="1.1">
+    <oracle-xsl-webmapper:ErrorsCount>0</oracle-xsl-webmapper:ErrorsCount>
+    <oracle-xsl-webmapper:WarningsCount>0</oracle-xsl-webmapper:WarningsCount>
+    <oracle-xsl-webmapper:IsImported>false</oracle-xsl-webmapper:IsImported>
+    <oracle-xsl-webmapper:HasMappings>true</oracle-xsl-webmapper:HasMappings>
+    <oracle-xsl-webmapper:StateInfoIsStale>false</oracle-xsl-webmapper:StateInfoIsStale>
+    <oracle-xsl-webmapper:SourcesReferenced>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/microsoftemail/GetAttachments/types">ns3:value</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_8afaa9b0-9411-4568-bdd2-ca6e3460c0f8/resources/processor_100/resourcegroup_124/generated.wsdl</uriAbsoluteLocation>
+        <param>CurrentAttachment</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:SourcesReferenced>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://www.oracle.com/2014/03/ics/schedule">ns3:schedule</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_8afaa9b0-9411-4568-bdd2-ca6e3460c0f8/resources/processor_8/resourcegroup_9/ICSSchedule_1.xsd</uriAbsoluteLocation>
+        <primary>true</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/microsoftemail/GetAttachments/types">ns3:value</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_8afaa9b0-9411-4568-bdd2-ca6e3460c0f8/resources/processor_100/resourcegroup_124/generated.wsdl</uriAbsoluteLocation>
+        <param>CurrentAttachment</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+</oracle-xsl-webmapper:StateInfo>
