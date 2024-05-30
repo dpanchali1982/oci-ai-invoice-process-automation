@@ -8,20 +8,15 @@
 Processing invoice attachments from emails and seamlessly integrating them into the destination ERP system is a worthwhile application of AI.
 Utilizing AI in conjunction with Oracle Integration Cloud, you can automate extracting invoice details from the attachments and seamlessly integrate them into ERP system. This integration significantly diminishes manual workload and automates the processing of invoices, including digital validation. This solution is adaptable to meet the specific needs of any industry.
 
-## Getting Started
-MISSING
 
 ### Prerequisites
-MISSING
-
-## Notes/Issues
-MISSING
+1. Oracle Cloud account : https://signup.cloud.oracle.com/
+2. OCI Document Understanding : https://docs.oracle.com/en-us/iaas/Content/document-understanding/using/home.htm
+3. Oracle Integration Cloud: https://docs.oracle.com/en-us/iaas/application-integration/index.html
 
 ## URLs
-* Nothing at this time
+https://otube.oracle.com/media/Harness%20the%20Power%20of%20OCI%20AI%20Document%20Understanding%20with%20Oracle%20Integration%20for%20seamless%20Invoice%20Processing/1_6c7lo03a
 
-## Contributing
-This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
 
 ## License
 Copyright (c) 2022 Oracle and/or its affiliates.
