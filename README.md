@@ -1,9 +1,8 @@
-# TITLE
-Streamline Invoice Processing Automation: Harnessing the Power of OCI AI Document Understanding with Oracle Integration Cloud for Seamless ERP Integration.
+# Streamline Invoice Processing Automation: Harnessing the Power of OCI AI Document Understanding with Oracle Integration Cloud for Seamless ERP Integration.
 
 [![License: UPL](https://img.shields.io/badge/license-UPL-green)](https://img.shields.io/badge/license-UPL-green) [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=oracle-devrel_test)](https://sonarcloud.io/dashboard?id=oracle-devrel_test)
 
-## THIS IS A NEW, BLANK REPO THAT IS NOT READY FOR USE YET.  PLEASE CHECK BACK SOON!
+
 
 ## Introduction
 Processing invoice attachments from emails and seamlessly integrating them into the destination ERP system is a worthwhile application of AI.
